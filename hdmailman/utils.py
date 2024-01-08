@@ -1,13 +1,8 @@
 import os
 from pika import BlockingConnection, ConnectionParameters, PlainCredentials
 
-from uuid import uuid4
-from typing import Union
-
 
 class Broker:
-
-    MessageBroker = Union[BlockingConnection, None]
 
     def __init__(self):
         self.host = os.environ.get("BROKER_HOST")
