@@ -3,7 +3,6 @@ from pika import BlockingConnection, ConnectionParameters, PlainCredentials
 
 
 class Broker:
-
     def __init__(self):
         self.host = os.environ.get("BROKER_HOST")
         self.port = os.environ.get("BROKER_PORT")
@@ -13,12 +12,9 @@ class Broker:
     @property
     def rabbitmq(self) -> ConnectionParameters:
         credentials = PlainCredentials(
-            username=self.username,
-            password=self.password
-        ) 
+            username=self.username, password=self.password
+        )
         conn_params = ConnectionParameters(
-            host=self.host,
-            port=self.port,
-            credentials=credentials
+            host=self.host, port=self.port, credentials=credentials
         )
         return BlockingConnection(conn_params)
