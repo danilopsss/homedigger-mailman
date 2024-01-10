@@ -1,0 +1,2 @@
+class VHostNotFoundException(Exception):
+    pass

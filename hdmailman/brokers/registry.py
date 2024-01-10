@@ -1,7 +1,7 @@
 from .rabbit import RabbitMQ
 
-class Registry:
 
+class Registry:
     @classmethod
     def get_broker_conn(cls, broker: str):
         match broker:
