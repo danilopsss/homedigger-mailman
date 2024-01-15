@@ -14,11 +14,11 @@ from hdmailman.exceptions import VHostNotFoundException
 
 class RabbitMQ:
     def __init__(self):
-        self._host = os.getenv("BROKER_HOST", "HOST")
-        self._port = os.getenv("BROKER_PORT", "0000")
-        self._username = os.getenv("BROKER_USERNAME", "USERNAME")
-        self._password = os.getenv("BROKER_PASSWORD", "PASSWORD")
-        self._vhost = os.getenv("BROKER_VHOST", "VHOST")
+        self._host = os.getenv("BROKER_HOST")
+        self._port = os.getenv("BROKER_PORT")
+        self._username = os.getenv("BROKER_USERNAME")
+        self._password = os.getenv("BROKER_PASSWORD")
+        self._vhost = os.getenv("BROKER_VHOST")
 
     @property
     def rabbitmq(self) -> BlockingConnection:
