@@ -1,5 +1,10 @@
+import logging
 from .brokers import Registry
-from typing import Union
+
+
+logging.basicConfig(
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.WARNING
+)
 
 
 class MailMan:
